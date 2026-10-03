@@ -34,10 +34,11 @@ html {
   margin: 0 auto;
   background-color: #fad9dc;
   border-bottom: 4px solid #f3a6b8;
-  position: absolute;
+    flex-wrap: wrap;
+  position: relative;
   width: 100%;
   overflow: hidden;
-  flex-wrap: wrap;
+  z-index: 1000;
 }
 
 .logo-container {
@@ -66,7 +67,7 @@ html {
 }
 
 .menu ul li a:hover {
-  color: #f3a6b8;
+  color: #d41467;
 }
 
 .prin {
@@ -74,55 +75,109 @@ html {
   background-position: center center;
   text-align: left;
   overflow: hidden;
-  padding: 150px;
+  padding: 100px 150px;
+  position: relative;
 }
 
 .texto-principal {
-  position: relative;
-  max-width: 600px;
-  z-index: 1;
+  max-width: 650px;
 }
 
 .texto-principal h2 {
-  font-size: 12px;
-  font-weight: 25;
+  font-size: 18px;
+  font-weight: 300;
   color: #c9005b;
+  margin-bottom: 15px;
 }
 
 .titulo-prin {
-  font-size: 85px;
+  font-size: 75px;
   line-height: 1.1;
 }
 
-.titulo-prin .palabras-color {
+.palabras-color {
   color: #c9005b;
 }
 
 .texto-principal p {
   width: 70%;
-  margin-right: auto;
-  margin-left: 0;
-  margin-top: 10px;
-  font-size: 27px;
-  line-height: 1.4;
+  margin-top: 20px;
+  font-size: 22px;
+  line-height: 1.5;
   font-weight: 400;
-  display: inline-block;
-  padding-bottom: 8px;
-  border-bottom: 8px solid;
+  padding-bottom: 10px;
+
+  border-bottom: 5px solid;
   border-image: linear-gradient(
-      to right,
-      #35bdeb,
-      #f3a6b8,
-      #fff,
-      #f3a6b8,
-      #35bdeb
-    )
-    1;
+    to right,
+    #35bdeb,
+    #f3a6b8,
+    #fff,
+    #f3a6b8,
+    #35bdeb
+  ) 1;
 }
 
 .btns-hero {
-  display: inline-block;
+  margin-top: 25px;
+}
+
+.btns-hero ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
   list-style: none;
+}
+
+.btns-hero a {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-prim {
+  background-color: #c9005b;
+  color: #ffffff;
+}
+
+.btn-sec {
+  background-color: #ffffff;
+  color: #c9005b;
+  border: 2px solid #c9005b;
+}
+
+.btns-hero a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.texto-2 {
+  display: flex;
+  gap: 40px;
+  margin-top: 35px;
+}
+
+.texto-2 article {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c9005b;
+}
+
+.imagen-hero {
+  position: absolute;
+  right: 100px;
+  top: 30px;
+  width: 40%;
+  text-align: center;
+}
+
+.modelo1 {
+  width: 450px;
+  margin: 20px;
+  border: 3px solid #d41467;
+  border-radius: 10px;
 }
 
 main {
@@ -130,24 +185,9 @@ main {
 }
 
 #servicios {
-  overflow: hidden;
-}
-
-footer {
-  display: flex;
-  font-size: 15px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #fad9dc;
-  border-top: 4px solid #f3a6b8;
-  height: 40px;
-  padding: 1rem 2rem;
-}
-
-#servicios {
   padding: 50px;
   text-align: center;
+  overflow: hidden;
 }
 
 #servicios h2 {
@@ -189,7 +229,7 @@ footer {
 .servicios-tarjetas {
   width: 25%;
   padding: 25px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
 }
@@ -216,14 +256,14 @@ footer {
   width: 70%;
   margin: 30px auto;
   padding: 25px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
 }
 
 .servicios-aliados > a {
   text-decoration: none;
-  color: #D41467;
+  color: #d41467;
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
@@ -253,7 +293,7 @@ footer {
 }
 
 .aliados-principal span {
-  color: #D41467;
+  color: #d41467;
   font-size: 18px;
   font-weight: bold;
 }
@@ -278,7 +318,7 @@ footer {
 .aliado {
   width: 28%;
   padding: 25px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
 }
@@ -304,7 +344,7 @@ footer {
 }
 
 .aliado a:hover {
-  color: #D41467;
+  color: #d41467;
 }
 
 #nosotros {
@@ -321,7 +361,7 @@ footer {
 }
 
 .nosotros-principal span {
-  color: #D41467;
+  color: #d41467;
   font-size: 18px;
   font-weight: bold;
 }
@@ -347,7 +387,7 @@ footer {
 .nosotros-tarjetas {
   width: 40%;
   padding: 25px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
 }
@@ -365,4 +405,16 @@ footer {
   font-size: 15px;
   color: #000000;
   line-height: 1.6;
+}
+
+footer {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #fad9dc;
+  border-top: 4px solid #f3a6b8;
+  height: 40px;
+  padding: 1rem 2rem;
 }
