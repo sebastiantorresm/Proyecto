@@ -26,6 +26,64 @@ html {
   background-color: #fff1f3;
 }
 
+.marquesina{
+    width: 100%;
+    background-color: #F3A6B8;
+    color: #000;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .mensajes{
+        display: flex;
+        animation: desplazar 40s linear infinite;
+    }
+    .mensaje{
+        flex: none;
+        padding:  0 24%;
+        color:#000;
+        font-size: 1.1em;
+        font-weight: 400;
+        white-space: nowrap;
+    }
+}
+@keyframes desplazar {
+    0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(60%);
+  }
+  20% {
+    transform: translateX(20%);
+  }
+  30% {
+    transform: translateX(-20%);
+  }
+  40% {
+    transform: translateX(-60%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-60%);
+  }
+  70% {
+    transform: translateX(-140%);
+  }
+  80% {
+    transform: translateX(-180%);
+  }
+  90% {
+    transform: translateX(-220%);
+  }
+  100% {
+    transform: translateX(-280%);
+  }
+ 
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
