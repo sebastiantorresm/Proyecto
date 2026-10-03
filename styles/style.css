@@ -155,8 +155,10 @@ footer {
 }
 
 #imagen-servicios {
-  width: 350px;
+  width: 450px;
   margin: 20px;
+  border: 3px solid #d41467;
+  border-radius: 10px;
 }
 
 .servicio-principal {
@@ -216,6 +218,7 @@ footer {
   padding: 25px;
   background-color: #FFFFFF;
   border-radius: 10px;
+  transition: 0.3s ease;
 }
 
 .servicios-aliados > a {
@@ -229,6 +232,11 @@ footer {
 
 .servicios-aliados > a:hover {
   color: #f3a6b8;
+}
+
+.servicios-aliados:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 #aliados {
