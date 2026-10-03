@@ -34,7 +34,7 @@ html {
   margin: 0 auto;
   background-color: #fad9dc;
   border-bottom: 4px solid #f3a6b8;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -109,13 +109,14 @@ html {
 
   border-bottom: 5px solid;
   border-image: linear-gradient(
-    to right,
-    #35bdeb,
-    #f3a6b8,
-    #fff,
-    #f3a6b8,
-    #35bdeb
-  ) 1;
+      to right,
+      #35bdeb,
+      #f3a6b8,
+      #ffffff,
+      #f3a6b8,
+      #35bdeb
+    )
+    1;
 }
 
 .btns-hero {
