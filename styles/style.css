@@ -12,41 +12,39 @@
 | 🟢 **Verde**            | `#35B98A`      | Indicadores de disponibilidad/aliados       |
 */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-font-family: "Oswald", sans-serif;
+html {
+  font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  background-color:#FFF1F3 ;
+  background-color: #fff1f3;
 }
 
-
-.nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.2rem 2rem;
-    margin: 0 auto;
-    background-color: #FAD9DC;
-    border-bottom: 4px solid #F3A6B8;
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    flex-wrap: wrap;
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.2rem 2rem;
+  margin: 0 auto;
+  background-color: #fad9dc;
+  border-bottom: 4px solid #f3a6b8;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
-
-.logo-container{
-    flex: 1;
-    .logo{
-        width: 150px;
-    }
+.logo-container {
+  flex: 1;
+  .logo {
+    width: 150px;
+  }
 }
 
 .menu ul {
@@ -62,165 +60,301 @@ font-family: "Oswald", sans-serif;
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
 }
 
-.menu ul li a:hover{
-    color:#F3A6B8 ;
+.menu ul li a:hover {
+  color: #f3a6b8;
 }
 
-.prin{
-    background-image:radial-gradient(circle,#FAD9DC  55%, #ffffff7c 100%);
-    background-position: center center;
-    text-align: left;
-    overflow: hidden;
-    padding: 150px;
+.prin {
+  background-image: radial-gradient(circle, #fad9dc 55%, #ffffff7c 100%);
+  background-position: center center;
+  text-align: left;
+  overflow: hidden;
+  padding: 150px;
 }
 
-.texto-principal{
-    position: relative;
-    max-width: 600px;
-    z-index: 1;
-    
+.texto-principal {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
 }
 
 .texto-principal h2 {
-    font-size: 12px;
-    font-weight: 25;
-    color: #C9005B ;
+  font-size: 12px;
+  font-weight: 25;
+  color: #c9005b;
 }
 
 .titulo-prin {
-    font-size: 85px;
-    line-height: 1.1;
+  font-size: 85px;
+  line-height: 1.1;
 }
 
 .titulo-prin .palabras-color {
-    color: #C9005B ;
+  color: #c9005b;
 }
 
 .texto-principal p {
-    width: 70%;
-    margin-right: auto;
-    margin-left: 0;
-    margin-top: 10px;
-    font-size: 27px;
-    line-height: 1.4;
-    font-weight: 400;
-    display: inline-block;
-    padding-bottom: 8px;
-    border-bottom:8px solid ;
-    border-image: linear-gradient(to right, #35BDEB, #F3A6B8, #fff, #F3A6B8, #35BDEB)1;
-
+  width: 70%;
+  margin-right: auto;
+  margin-left: 0;
+  margin-top: 10px;
+  font-size: 27px;
+  line-height: 1.4;
+  font-weight: 400;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 8px solid;
+  border-image: linear-gradient(
+      to right,
+      #35bdeb,
+      #f3a6b8,
+      #fff,
+      #f3a6b8,
+      #35bdeb
+    )
+    1;
 }
 
-.btns-hero{
-    display: inline-block;
-    list-style:none;
+.btns-hero {
+  display: inline-block;
+  list-style: none;
 }
 
-main{
-    padding-bottom: 30px;
+main {
+  padding-bottom: 30px;
 }
 
-#servicios{
-    overflow: hidden;
+#servicios {
+  overflow: hidden;
 }
 
-footer{
-    display: flex;
-    font-size: 15px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: #FAD9DC;
-    border-top: 4px solid #F3A6B8;
-    height: 40px;
-    padding: 1rem 2rem;
+footer {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #fad9dc;
+  border-top: 4px solid #f3a6b8;
+  height: 40px;
+  padding: 1rem 2rem;
 }
 
-.serv{
-    padding: 80px 150px;
-    background-color: #FFF1F3;
+#servicios {
+  padding: 50px;
+  text-align: center;
 }
 
-.serv h2{
-    font-size: 55px;
-    color: #C9005B;
-    margin-bottom: 30px;
+#servicios h2 {
+  font-size: 35px;
 }
 
-#imagen-servicios{
-    width: 450px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 30px;
+#imagen-servicios {
+  width: 350px;
+  margin: 20px;
 }
 
-.serv article{
-    background-color: #FFFFFF;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    font-size: 18px;
+.servicio-principal {
+  margin-bottom: 40px;
 }
 
-.ali{
-    padding: 80px 150px;
-    background-color: #FAD9DC;
+.servicio-principal span {
+  color: #d41467;
+  font-size: 18px;
 }
 
-.ali h2{
-    font-size: 55px;
-    color: #C9005B;
-    margin-bottom: 30px;
+.servicio-principal h3 {
+  font-size: 30px;
+  margin: 10px;
 }
 
-.ali article{
-    background-color: #FFFFFF;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    font-size: 18px;
+.servicio-principal p {
+  font-size: 15px;
+  color: #555555;
 }
 
-.noti{
-    padding: 80px 150px;
-    background-color: #FFF1F3;
-    min-height: 300px;
+.contenedor-servicios-tarjetas {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
-.noti h2{
-    font-size: 55px;
-    color: #C9005B;
-    margin-bottom: 30px;
+.servicios-tarjetas {
+  width: 25%;
+  padding: 25px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  transition: 0.3s ease;
 }
 
-.noti article{
-    background-color: #FFFFFF;
-    min-height: 150px;
-    border-radius: 10px;
-    padding: 20px;
+.servicios-tarjetas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.quines{
-    padding: 80px 150px;
-    background-color: #FFFFFF;
+.servicios-tarjetas span {
+  color: #c9005b;
+  font-weight: bold;
 }
 
-.quines h2{
-    font-size: 55px;
-    color: #C9005B;
-    margin-bottom: 30px;
+.servicios-tarjetas h3 {
+  font-size: 20px;
 }
 
-.quines article{
-    max-width: 800px;
-    padding: 20px;
-    margin-bottom: 15px;
-    background-color: #FFF1F3;
-    border-radius: 10px;
-    font-size: 18px;
-    line-height: 1.5;
+.servicios-tarjetas p {
+  font-size: 14px;
+}
+
+.servicios-aliados {
+  width: 70%;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.servicios-aliados > a {
+  text-decoration: none;
+  color: #D41467;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.servicios-aliados > a:hover {
+  color: #f3a6b8;
+}
+
+#aliados {
+  padding: 50px;
+  text-align: center;
+}
+
+#aliados h2 {
+  font-size: 35px;
+}
+
+.aliados-principal {
+  margin-bottom: 40px;
+}
+
+.aliados-principal span {
+  color: #D41467;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.aliados-principal h3 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.aliados-principal p {
+  font-size: 15px;
+  color: #555555;
+}
+
+.contenedor-aliados-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.aliado {
+  width: 28%;
+  padding: 25px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.aliado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.aliado h3 {
+  font-size: 20px;
+}
+
+.aliado p {
+  font-size: 14px;
+  color: #555555;
+}
+
+.aliado a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.aliado a:hover {
+  color: #D41467;
+}
+
+#nosotros {
+  padding: 50px;
+  text-align: center;
+}
+
+#nosotros h2 {
+  font-size: 35px;
+}
+
+.nosotros-principal {
+  margin-bottom: 40px;
+}
+
+.nosotros-principal span {
+  color: #D41467;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nosotros-principal h3 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.nosotros-principal p {
+  font-size: 15px;
+  color: #555555;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contenedor-nosotros-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nosotros-tarjetas {
+  width: 40%;
+  padding: 25px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.nosotros-tarjetas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nosotros-tarjetas h3 {
+  font-size: 22px;
+}
+
+.nosotros-tarjetas p {
+  font-size: 15px;
+  color: #000000;
+  line-height: 1.6;
 }
