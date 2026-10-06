@@ -26,29 +26,29 @@ html {
   background-color: #fff1f3;
 }
 
-.marquesina{
-    width: 100%;
-    background-color: #F3A6B8;
-    color: #000;
-    height: 40px;
-    overflow: hidden;
+.marquesina {
+  width: 100%;
+  background-color: #f3a6b8;
+  color: #000;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  .mensajes {
     display: flex;
-    align-items: center;
-    .mensajes{
-        display: flex;
-        animation: desplazar 40s linear infinite;
-    }
-    .mensaje{
-        flex: none;
-        padding:  0 24%;
-        color:#000;
-        font-size: 1.1em;
-        font-weight: 400;
-        white-space: nowrap;
-    }
+    animation: desplazar 40s linear infinite;
+  }
+  .mensaje {
+    flex: none;
+    padding: 0 24%;
+    color: #000;
+    font-size: 1.1em;
+    font-weight: 400;
+    white-space: nowrap;
+  }
 }
 @keyframes desplazar {
-    0% {
+  0% {
     transform: translateX(100%);
   }
   10% {
@@ -81,7 +81,6 @@ html {
   100% {
     transform: translateX(-280%);
   }
- 
 }
 
 .nav {
@@ -104,6 +103,7 @@ html {
   .logo {
     width: 150px;
   }
+
 }
 
 .menu ul {
@@ -241,6 +241,7 @@ html {
 
 main {
   padding-bottom: 30px;
+  overflow: hidden;
 }
 
 #servicios {
@@ -291,11 +292,13 @@ main {
   background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
+  border: 4px inset #c9005ad2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .servicios-tarjetas:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.348);
 }
 
 .servicios-tarjetas span {
