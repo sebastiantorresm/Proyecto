@@ -477,3 +477,28 @@ footer {
   height: 40px;
   padding: 1rem 2rem;
 }
+.salida-rapida {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1100;
+  padding: 12px 20px;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.salida-rapida:hover {
+  background-color: #222222;
+}
+
+.salida-rapida:focus-visible {
+  outline: 3px solid #ffd43b;
+  outline-offset: 3px;
+}
