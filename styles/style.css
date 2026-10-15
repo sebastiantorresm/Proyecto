@@ -108,7 +108,7 @@ html {
 
 .menu ul {
   display: flex;
-  justify-content: center; /* centra horizontalmente */
+  justify-content: center;
   list-style: none;
   gap: 60px 50px;
 }
