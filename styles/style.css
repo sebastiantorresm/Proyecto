@@ -502,3 +502,131 @@ footer {
   outline: 3px solid #ffd43b;
   outline-offset: 3px;
 }
+#noticias {
+  padding: 50px;
+  text-align: center;
+}
+
+#noticias h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.carrusel {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carrusel-pista {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+    scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carrusel-pista::-webkit-scrollbar {
+  display: none;
+}
+
+.diapositiva {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 25px;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.diapositiva img {
+  width: 45%;
+  height: 450px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.diapositiva-texto {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.diapositiva-etiqueta {
+  color: #c9005b;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.diapositiva-texto h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.diapositiva-texto p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555555;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background-color: #d58eb8;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel-anterior {
+  left: 10px;
+}
+
+.carrusel-siguiente {
+  right: 10px;
+}
+
+.carrusel-btn:hover {
+  background-color: #d41467;
+}
+
+.carrusel-btn:focus-visible {
+  outline: 3px solid #ffd43b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  #noticias {
+    padding: 30px 15px;
+  }
+
+  .diapositiva {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .diapositiva img {
+    width: 100%;
+    height: 320px;
+  }
+
+  .diapositiva-texto h3 {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrusel-pista {
+    scroll-behavior: auto;
+  }
+}
