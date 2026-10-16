@@ -85,59 +85,68 @@ html {
 
 .nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.2rem 2rem;
-  margin: 0 auto;
-  background-color: #fad9dc;
-  border-bottom: 4px solid #f3a6b8;
   flex-wrap: wrap;
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  overflow: hidden;
+  padding: 0.5rem clamp(1rem, 4vw, 3rem);
+  background-color: #facdd1;
+  border-bottom: 3px solid #f3a6b8;
+  position: relative;
   z-index: 1000;
 }
 
 .logo-container {
-  flex: 1;
+  display: flex;
+  align-items: center;
   .logo {
     width: 150px;
+    display: block;
   }
-
 }
 
 .menu ul {
   display: flex;
-  justify-content: center; /* centra horizontalmente */
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
   list-style: none;
-  gap: 60px 50px;
+  flex-wrap: wrap;
 }
 
 .menu ul li a {
+  display: flex;
+  padding: 8px 17px;
+  color: #050505;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 11px rgba(201, 0, 91, 0.2);
+  border: 2px solid #d41467;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 600;
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px;
-  transition:
-    color 0.3s ease,
-    border-bottom 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .menu ul li a:hover {
-  color: #d41467;
+  color: #ffffff;
+  background-color: #c9005b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(201, 0, 91, 0.25);
 }
 
 .prin {
-  background-image: radial-gradient(circle, #fad9dc 55%, #ffffff7c 100%);
-  background-position: center center;
-  text-align: left;
-  overflow: hidden;
-  padding: 100px 150px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
   position: relative;
 }
 
 .texto-principal {
+  flex: 1;
+  min-width: 0;
   max-width: 650px;
 }
 
@@ -158,7 +167,7 @@ html {
 }
 
 .texto-principal p {
-  width: 70%;
+  width: 100%;
   margin-top: 20px;
   font-size: 22px;
   line-height: 1.5;
@@ -175,6 +184,7 @@ html {
       #35bdeb
     )
     1;
+  box-sizing: border-box;
 }
 
 .btns-hero {
@@ -183,17 +193,21 @@ html {
 
 .btns-hero ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   align-items: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .btns-hero a {
+  display: block;
   text-decoration: none;
   padding: 12px 25px;
   border-radius: 8px;
   font-weight: bold;
-  transition: 0.3s ease;
+  transition: 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-prim {
@@ -218,25 +232,36 @@ html {
   margin-top: 35px;
 }
 
-.texto-2 article {
+.texto-2 p {
   font-size: 20px;
   font-weight: bold;
   color: #c9005b;
 }
 
 .imagen-hero {
-  position: absolute;
-  right: 100px;
-  top: 30px;
-  width: 40%;
-  text-align: center;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modelo1 {
-  width: 450px;
-  margin: 20px;
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  margin: 0;
+  height: auto;
   border: 3px solid #d41467;
   border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.modelo1:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow:
+    0 25px 50px rgba(201, 0, 91, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 main {
@@ -259,6 +284,14 @@ main {
   margin: 20px;
   border: 3px solid #d41467;
   border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+#imagen-servicios:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow:
+    0 25px 50px rgba(201, 0, 91, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .servicio-principal {
@@ -293,12 +326,14 @@ main {
   border-radius: 10px;
   transition: 0.3s ease;
   border: 4px inset #c9005ad2;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .servicios-tarjetas:hover {
   transform: scale(1.03) translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.348);
+  box-shadow:
+    0 25px 50px rgba(201, 0, 91, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .servicios-tarjetas span {
@@ -321,6 +356,8 @@ main {
   background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
+  border: 4px inset #c9005ad2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .servicios-aliados > a {
@@ -337,8 +374,10 @@ main {
 }
 
 .servicios-aliados:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03) translateY(-5px);
+  box-shadow:
+    0 25px 50px rgba(201, 0, 91, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 #aliados {
@@ -383,11 +422,15 @@ main {
   background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
+  border: 4px inset #c9005ad2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .aliado:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03) translateY(-5px);
+  box-shadow:
+    0 25px 50px rgba(201, 0, 91, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .aliado h3 {
@@ -452,11 +495,15 @@ main {
   background-color: #ffffff;
   border-radius: 10px;
   transition: 0.3s ease;
+  border: 4px inset #c9005ad2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .nosotros-tarjetas:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03) translateY(-5px);
+  box-shadow:
+    0 25px 50px rgba(201, 0, 91, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .nosotros-tarjetas h3 {
