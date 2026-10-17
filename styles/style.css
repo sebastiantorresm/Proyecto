@@ -404,7 +404,7 @@ main {
 }
 
 .servicios-aliados > a {
-  display: inline-block;
+  display: block;
   padding: 10px;
   color: #c9005b;
   font-size: 18px;
@@ -554,17 +554,87 @@ main {
   line-height: 1.6;
 }
 
-footer {
+.footer {
   display: flex;
-  font-size: 15px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
   background-color: #fad9dc;
   border-top: 4px solid #f3a6b8;
-  height: 40px;
-  padding: 1rem 2rem;
+  font-size: 15px;
 }
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 35px 8%;
+}
+
+.footer-marca {
+  flex: 1;
+  max-width: 350px;
+}
+
+.footer-marca h2 {
+  color: #c9005b;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-marca p,
+.footer-nosotros p {
+  color: #050505;
+  line-height: 1.6;
+}
+
+.footer a{
+  font-weight: bold;
+}
+
+.footer-enlaces,
+.footer-nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.footer-enlaces h3,
+.footer-nosotros h3 {
+  color: #c9005b;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.footer-enlaces a,
+.footer-nosotros a {
+  width: fit-content;
+  color: #050505;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-enlaces a:hover,
+.footer-nosotros a:hover {
+  color: #c9005b;
+}
+
+.footer-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 15px 8%;
+  background-color: #c9005b;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-inferior p {
+  margin: 0;
+}
+
 .salida-rapida {
   position: fixed;
   bottom: 20px;
@@ -975,5 +1045,23 @@ footer {
   #nosotros h2,
   #noticias h2 {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-contenido {
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  .footer-marca {
+    max-width: 100%;
+  }
+
+  .footer-inferior {
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 20px;
   }
 }
