@@ -101,7 +101,7 @@ html {
   display: flex;
   align-items: center;
   .logo {
-    width: 150px;
+    width: 200px;
     display: block;
   }
 }
@@ -889,10 +889,6 @@ footer {
     max-width: 450px;
     margin: 0 auto;
     display: block;
-  }
-
-  .aliado {
-    width: calc(50% - 10px);
   }
 
   .nosotros-tarjetas {
