@@ -19,7 +19,7 @@
 }
 
 html {
-  font-family: "Oswald", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -89,7 +89,8 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.5rem clamp(1rem, 4vw, 3rem);
+  padding: 0.2rem 2rem;
+  margin: 0 auto;
   background-color: #facdd1;
   border-bottom: 3px solid #f3a6b8;
   position: relative;
@@ -137,28 +138,26 @@ html {
 
 .prin {
   display: flex;
-  gap: 50px;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 100px;
-  position: relative;
+  gap: 50px;
+  padding: 70px 8%;
 }
 
 .texto-principal {
   flex: 1;
-  min-width: 0;
-  max-width: 650px;
+  max-width: 600px;
 }
 
 .texto-principal h2 {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   color: #c9005b;
   margin-bottom: 15px;
 }
 
 .titulo-prin {
-  font-size: 75px;
+  font-size: 60px;
   line-height: 1.1;
 }
 
@@ -167,14 +166,10 @@ html {
 }
 
 .texto-principal p {
-  width: 100%;
   margin-top: 20px;
-  font-size: 22px;
-  line-height: 1.5;
-  font-weight: 400;
-  padding-bottom: 10px;
-
-  border-bottom: 5px solid;
+  padding-bottom: 15px;
+  font-size: 20px;
+  line-height: 1.6;
   border-image: linear-gradient(
       to right,
       #35bdeb,
@@ -184,7 +179,8 @@ html {
       #35bdeb
     )
     1;
-  box-sizing: border-box;
+  font-weight: 400;
+  border-bottom: 4px solid #f3a6b8;
 }
 
 .btns-hero {
@@ -194,22 +190,18 @@ html {
 .btns-hero ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
   align-items: center;
+  gap: 15px;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .btns-hero a {
   display: block;
-  text-decoration: none;
   padding: 12px 25px;
   border-radius: 8px;
   font-weight: bold;
-  transition:
-    0.3s ease,
-    box-shadow 0.3s ease;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn-prim {
@@ -225,38 +217,39 @@ html {
 
 .btns-hero a:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 12px #00000026;
 }
 
 .texto-2 {
   display: flex;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 20px 35px;
   margin-top: 35px;
 }
 
 .texto-2 p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #c9005b;
 }
 
 .imagen-hero {
   flex: 1;
-  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 0;
 }
 
 .modelo1 {
   display: block;
   width: 100%;
   max-width: 450px;
-  margin: 0;
   height: auto;
-  border: 3px solid #d41467;
+  border: 4px solid #f3a6b8;
   border-radius: 10px;
-  transition: 0.3s ease;
+  box-shadow: 0 10px 30px #00000026;
+  transition: 0.3s;
 }
 
 .modelo1:hover {
@@ -271,64 +264,93 @@ main {
   overflow: hidden;
 }
 
-#servicios {
+.serv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
   padding: 50px;
+}
+
+.serv h2 {
+  width: 100%;
   text-align: center;
-  overflow: hidden;
+  font-size: 50px;
 }
 
-#servicios h2 {
-  font-size: 35px;
+.servicios-contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
 }
 
-#imagen-servicios {
-  width: 450px;
-  margin: 20px;
+.imagen-servicios {
+  width: 40%;
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+  align-self: stretch;
   border: 3px solid #d41467;
   border-radius: 10px;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-#imagen-servicios:hover {
+.imagen-servicios:hover {
   transform: translateY(-8px) rotate(1deg);
   box-shadow:
     0 25px 50px rgba(201, 0, 91, 0.25),
     0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.servicios-derecha {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .servicio-principal {
-  margin-bottom: 40px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .servicio-principal span {
-  color: #d41467;
-  font-size: 18px;
+  color: #c9005b;
+  font-weight: bold;
 }
 
 .servicio-principal h3 {
-  font-size: 30px;
-  margin: 10px;
+  font-size: 28px;
+  margin: 10px 0;
 }
 
 .servicio-principal p {
-  font-size: 15px;
-  color: #555555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .contenedor-servicios-tarjetas {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
 
 .servicios-tarjetas {
-  width: 25%;
-  padding: 25px;
+  flex: 1 1 200px;
+  box-sizing: border-box;
+  padding: 20px;
   background-color: #ffffff;
+  border: 2px solid #d41467;
   border-radius: 10px;
-  transition: 0.3s ease;
-  border: 4px inset #c9005ad2;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px #0000001a;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .servicios-tarjetas:hover {
@@ -349,30 +371,20 @@ main {
 
 .servicios-tarjetas p {
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .servicios-aliados {
-  width: 70%;
-  margin: 30px auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
   padding: 25px;
-  background-color: #ffffff;
+  text-align: center;
+  border: 2px solid #d41467;
   border-radius: 10px;
-  transition: 0.3s ease;
-  border: 4px inset #c9005ad2;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.servicios-aliados > a {
-  text-decoration: none;
-  color: #d41467;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-.servicios-aliados > a:hover {
-  color: #f3a6b8;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px #0000001a;
+  transition: 0.3s;
 }
 
 .servicios-aliados:hover {
@@ -380,6 +392,20 @@ main {
   box-shadow:
     0 25px 50px rgba(201, 0, 91, 0.25),
     0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.servicios-aliados > a {
+  display: inline-block;
+  padding: 10px;
+  color: #c9005b;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.servicios-aliados > a:hover {
+  color: #d41467;
+  text-decoration: underline;
 }
 
 #aliados {
@@ -457,6 +483,7 @@ main {
 #nosotros {
   padding: 50px;
   text-align: center;
+  line-height: 1.5;
 }
 
 #nosotros h2 {
