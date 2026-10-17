@@ -207,7 +207,9 @@ html {
   padding: 12px 25px;
   border-radius: 8px;
   font-weight: bold;
-  transition: 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-prim {
@@ -574,7 +576,7 @@ footer {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   border-radius: 10px;
-    scrollbar-width: none;
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 .carrusel-pista::-webkit-scrollbar {
@@ -653,6 +655,103 @@ footer {
 .carrusel-btn:focus-visible {
   outline: 3px solid #ffd43b;
   outline-offset: 3px;
+}
+
+.boton-contraste {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1100;
+  padding: 12px 18px;
+  background-color: #ffd43b;
+  color: #050505;
+  border: 2px solid #050505;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.boton-contraste:hover {
+  background-color: #050505;
+  color: #ffd43b;
+}
+
+.boton-contraste:focus-visible {
+  outline: 3px solid #35bdeb;
+  outline-offset: 3px;
+}
+
+.alto-contraste {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.alto-contraste main,
+.alto-contraste section,
+.alto-contraste article,
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste nav {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste p,
+.alto-contraste span,
+.alto-contraste li,
+.alto-contraste a {
+  color: #ffffff;
+}
+
+.alto-contraste a {
+  text-decoration: none;
+}
+
+.alto-contraste .btns-hero a {
+  text-decoration: none;
+  background-color: #ffd43b;
+  color: #000000;
+  border: 2px solid #ffd43b;
+}
+
+.alto-contraste .nav a {
+  text-decoration: none;
+  background-color: #ffd43b;
+  color: #000000;
+  border: 2px solid #ffd43b;
+}
+
+.alto-contraste button {
+  background-color: #ffd43b;
+  color: #000000;
+  border: 2px solid #ffd43b;
+}
+
+.alto-contraste img {
+  border-color: #ffffff;
+}
+
+.alto-contraste .servicios-tarjetas,
+.alto-contraste .aliado,
+.alto-contraste .nosotros-tarjetas,
+.alto-contraste .servicios-aliados,
+.alto-contraste .diapositiva {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffd43b;
+}
+
+.alto-contraste .servicios-tarjetas p,
+.alto-contraste .aliado p,
+.alto-contraste .servicios-aliados p,
+.alto-contraste .diapositiva-texto p,
+.alto-contraste .servicio-principal p,
+.alto-contraste .aliados-principal p,
+.alto-contraste .nosotros-principal p {
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
