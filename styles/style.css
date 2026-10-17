@@ -36,7 +36,7 @@ html {
     align-items: center;
     .mensajes{
         display: flex;
-        animation: desplazar 40s linear infinite;
+        animation: desplazar 60s linear infinite;
     }
     .mensaje{
         flex: none;
@@ -665,5 +665,228 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .carrusel-pista {
     scroll-behavior: auto;
+  }
+}
+.serv {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  grid-template-areas:
+    "titulo texto"
+    "imagen tarjetas"
+    "imagen aliados";
+  column-gap: 30px;
+  row-gap: 20px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.serv h2 {
+  grid-area: titulo;
+  text-align: center;
+}
+
+.serv > img {
+  grid-area: imagen;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.servicio-principal {
+  grid-area: texto;
+  display: block;
+  margin: 0;
+}
+
+.servicio-principal p {
+  width: auto;
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.contenedor-servicios-tarjetas {
+  grid-area: tarjetas;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.servicios-tarjetas {
+  width: auto;
+  height: auto;
+  min-height: 180px;
+  margin: 0;
+}
+
+.servicios-aliados {
+  grid-area: aliados;
+  flex: none;
+  width: auto;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .serv {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "texto"
+      "imagen"
+      "tarjetas"
+      "aliados";
+  }
+
+  .serv > img {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .servicio-principal p {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-servicios-tarjetas {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsivo*/
+
+@media (max-width: 1024px) {
+  .prin {
+    padding: 60px 40px;
+  }
+
+  .prin .texto-principal {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .titulo-prin {
+    font-size: 56px;
+    margin-left: 0;
+  }
+
+  .texto-principal p {
+    width: 100%;
+  }
+
+  .btns-hero {
+    margin-left: 0;
+  }
+
+  .texto-2 {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .imagen-hero {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .modelo1 {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .aliado {
+    width: calc(50% - 10px);
+  }
+
+  .nosotros-tarjetas {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    justify-content: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo-container {
+    flex: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    gap: 5px 10px;
+  }
+
+  .menu ul li a {
+    font-size: 16px;
+  }
+
+  .prin {
+    padding: 40px 20px;
+  }
+
+  .titulo-prin {
+    font-size: 40px;
+  }
+
+  .texto-principal p {
+    font-size: 18px;
+  }
+
+  .btns-hero ul {
+    flex-wrap: wrap;
+  }
+
+  .texto-2 {
+    gap: 10px 25px;
+  }
+
+  .serv {
+    padding: 30px 15px;
+  }
+
+  .contenedor-servicios-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  #aliados,
+  #nosotros {
+    padding: 30px 15px;
+  }
+
+  .aliado {
+    width: 100%;
+  }
+
+  .contenedor-nosotros-tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nosotros-tarjetas {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-prin {
+    font-size: 32px;
+  }
+
+  .serv h2,
+  #aliados h2,
+  #nosotros h2,
+  #noticias h2 {
+    font-size: 28px;
   }
 }
